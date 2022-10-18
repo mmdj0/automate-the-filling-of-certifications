@@ -16,7 +16,7 @@ def drop_dup(ary):
 
 items = []
 
-with open('names_MKT - Feuille 1.csv') as csvfile:
+with open('theCSVfile.csv') as csvfile:
     csvReader = csv.reader(csvfile)
     for row in csvReader:
         items.append(row[0])
@@ -36,6 +36,6 @@ while i<ln:
     w1,h1=draw.textsize(items[i],font=font)
     draw.text(((W-w1)/2,(H-h1)/2),items[i],(0,0,0),font=font)
     
-    imgcp.save(f'/home/maroua/Documents/omc_certif_final/omc_certif_mrkt/output_{i}.jpg')
+    imgcp.save(f'/home/maroua/locationOfTheOutput/output_{i}.jpg')
     i+=1
 
